@@ -1,0 +1,40 @@
+.app { font-family: system-ui, sans-serif; }
+.app-toolbar { display: flex; gap: 8px; align-items: center; padding: 8px; border-bottom: 1px solid #ddd; }
+.app-toolbar button, .actions button, .users button { padding: 6px 12px; cursor: pointer; }
+.app-toolbar button:disabled { cursor: not-allowed; opacity: 0.5; }
+.status { margin-left: 12px; font-size: 14px; }
+.message { color: #b00020; font-size: 14px; }
+.app-body { display: flex; }
+.editor-area { flex: 1; min-width: 0; }
+.side-panel { width: 280px; padding: 12px 16px; border-left: 1px solid #ddd; overflow: auto; max-height: 640px; }
+.side-panel h3 { margin-top: 0; margin-bottom: 12px; font-size: 16px; }
+.users { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.users button {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.users button.active { border-color: #1565c0; background: #e3f2fd; font-weight: 600; }
+.user-badge {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); display: flex; align-items: center; justify-content: center; z-index: 5000; }
+.dialog { background: #fff; padding: 16px 20px; border-radius: 6px; width: 340px; display: grid; gap: 12px; }
+.dialog h3 { margin: 0; }
+.dialog fieldset { display: grid; gap: 8px; }
+.dialog fieldset label { display: flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; }
+.field { display: grid; gap: 4px; font-size: 14px; }
+.field select, .field input { padding: 6px; }
+.actions { display: flex; justify-content: flex-end; gap: 8px; }
